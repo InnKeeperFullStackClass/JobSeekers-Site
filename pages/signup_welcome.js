@@ -16,6 +16,8 @@ function Welcome() {
       </div>
     );
 
+  const email = session?.user?.email; // Optional chaining to handle undefined session data
+
   return (
     <div className="min-h-screen py-10 px-3 bg-[url('/clipped-rings.svg')] bg-no-repeat bg-right">
       <div className="flex flex-col items-center gap-7 py-5">
@@ -37,7 +39,7 @@ function Welcome() {
           <div className="bg my-3">
             <Image
               src={signThanks}
-              alt="flincap's logo"
+              alt="signthanks"
               className="mx-auto my-6"
               width={150}
               priority
@@ -45,8 +47,8 @@ function Welcome() {
           </div>
 
           <p className="text-center text-zinc-400 text-lg">
-            We sent a verification email to {session.user?.email} <br /> Click
-            the link inside to get started!
+            We sent a verification email to {email} <br /> Click the link inside
+            to get started!
           </p>
           <Link
             href="/"
