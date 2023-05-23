@@ -1,8 +1,8 @@
+import AdminLayout from "@/layout/AdminLayout";
 import React from "react";
-import AdminLayout from "../../layouts/AdminLayout";
 
 const UsersPage = () => {
-  return <AdminLayout>{/* Content for the admin users page */}</AdminLayout>;
+  return <AdminLayout>Content</AdminLayout>;
 };
 
 export default UsersPage;
