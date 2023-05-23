@@ -1,6 +1,5 @@
 import formidable from "formidable";
 import { v2 as cloudinary } from "cloudinary";
-import { NextApiRequest, NextApiResponse } from "next";
 
 cloudinary.config({
   cloud_name: "YOUR_CLOUDINARY_CLOUD_NAME",
@@ -8,10 +7,7 @@ cloudinary.config({
   api_secret: "YOUR_CLOUDINARY_API_SECRET",
 });
 
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse
-) {
+export default async function handler(req, res) {
   if (req.method === "POST") {
     const form = new formidable.IncomingForm();
 
