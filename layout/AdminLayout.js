@@ -1,8 +1,8 @@
-import Link from "next/link";
+import Footer from "@/app/Components/Footer";
+import Header from "@/app/Components/Header";
+import Sidebar from "@/app/Components/Sidebar";
+
 import React, { useState } from "react";
-import Sidebar from "../components/Sidebar";
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 
 const AdminLayout = ({ children }) => {
   return (
