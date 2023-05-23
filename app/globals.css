@@ -3,7 +3,16 @@
 @tailwind utilities;
 
 /* Add your global styles below */
-body {
-  background-color: #f9f9f9;
-  /* Add more global styles as needed */
+body,
+html {
+  min-height: 100vh;
+  background: #f9f9f9;
+  color: #324063;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
