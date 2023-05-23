@@ -1,5 +1,5 @@
 [build]
   functions = "functions"
-  command = "make install"
+  command = "npm install && npm run build"
 
 
