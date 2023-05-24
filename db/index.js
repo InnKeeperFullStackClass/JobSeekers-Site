@@ -1,11 +1,15 @@
-import { Pool } from "pg";
+// db.js
 
-const pool = new Pool({
-  user: "YOUR_POSTGRES_USER",
-  host: "YOUR_POSTGRES_HOST",
-  database: "YOUR_POSTGRES_DATABASE",
-  password: "YOUR_POSTGRES_PASSWORD",
-  port: YOUR_POSTGRES_PORT,
-});
+import { MongoClient } from "mongodb";
 
-export default pool;
+const uri = process.env.MONGODB_URI;
+const options = {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+};
+
+export async function connectToDatabase() {
+  const client = new MongoClient(uri, options);
+  await client.connect();
+  return client;
+}

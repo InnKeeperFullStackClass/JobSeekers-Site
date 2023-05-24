@@ -5,11 +5,11 @@ import React from "react";
 
 const JobSeekerLayout = ({ children }) => {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <Header />
-      <div>
+      <div className="flex flex-1">
         <Sidebar />
-        <main>{children}</main>
+        <main className="flex-1 bg-gray-100">{children}</main>
       </div>
       <Footer />
     </div>

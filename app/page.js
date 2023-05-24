@@ -39,7 +39,12 @@ export default function Home() {
           </nav>
         </div>
         <div className="relative">
-          <Image src={HomeHero} alt="homehero" className="max-w-full" />
+          <Image
+            src={HomeHero}
+            alt="homehero"
+            className="max-w-full"
+            priority
+          />
           <div className="absolute top-0 left-0 w-full h-full flex">
             <div className="w-1/2 bg-gray-500 bg-opacity-50 flex items-center justify-center">
               <div className="text-white">
