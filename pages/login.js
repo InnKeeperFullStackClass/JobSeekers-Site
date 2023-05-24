@@ -3,15 +3,12 @@ import {
   CheckIcon,
   EyeIcon,
   EyeSlashIcon,
-  GoogleIcon,
   InformationCircleIcon,
 } from "../app/Components/icons";
 import { useRouter } from "next/router";
-
 import Link from "next/link";
-
-import { validEmail, validPassword } from "../lib";
-import { toast, ToastContainer } from "react-toastify";
+import { validEmail } from "../lib";
+// import { toast, ToastContainer } from "react-toastify";
 import { signIn } from "next-auth/react";
 
 function Login() {
@@ -22,7 +19,6 @@ function Login() {
     password: "",
   });
   const [isEmailValid, setIsEmailValid] = useState(true);
-  const [isPasswordValid, setIsPasswordValid] = useState(true);
   const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
@@ -54,27 +50,24 @@ function Login() {
   };
 
   return (
-    <div className="min-h-screen py-10 px-3 bg-[url('/clipped-rings.svg')] bg-no-repeat bg-right">
-      <ToastContainer />
+    <div className="">
+      {/* <ToastContainer /> */}
 
-      <div className="flex flex-col items-center gap-7 py-5">
+      <div className="">
         <div>
-          <Link
-            href="/"
-            className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-          >
+          <Link href="/" className="">
             <h1 className="text-xl font-bold">*D O M*</h1>
           </Link>
         </div>
 
-        <div className="form-container bg-white border w-full border-zinc-300 rounded-md px-4 py-6 max-w-lg min-w-[290px]">
+        <div className=" text-center mx-auto  ">
           <h2 className="text-2xl font-semibold mb-1">Login</h2>
           <hr />
-          <form onSubmit={signin} className="py-2 mt-2 auth-form">
+          <form onSubmit={signin} className="">
             <div
               className={`inp border-2 ${
                 isEmailValid ? "border-zinc-300" : "border-red-500"
-              } rounded p-2 flex w-full gap-1 items-center my-4`}
+              } rounded p-2 w-full gap-1 items-center my-4`}
             >
               <input
                 type="text"
@@ -84,24 +77,23 @@ function Login() {
                 onChange={updateState}
               />
               <div className="info">
-                {credentials.email &&
-                  (!isEmailValid ? (
-                    <span>
-                      <InformationCircleIcon
-                        height={20}
-                        width={20}
-                        className="text-red-500"
-                      />
-                    </span>
-                  ) : (
-                    <span>
+                {credentials.email && (
+                  <span>
+                    {isEmailValid ? (
                       <CheckIcon
                         height={20}
                         width={20}
                         className="text-blue-1"
                       />
-                    </span>
-                  ))}
+                    ) : (
+                      <InformationCircleIcon
+                        height={20}
+                        width={20}
+                        className="text-red-500"
+                      />
+                    )}
+                  </span>
+                )}
               </div>
             </div>
 

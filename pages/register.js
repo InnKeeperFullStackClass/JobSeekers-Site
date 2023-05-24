@@ -8,8 +8,6 @@ import {
 import { useRouter } from "next/router";
 import Link from "next/link";
 import { validEmail, validPassword } from "../lib";
-
-import { toast, ToastContainer } from "react-toastify";
 import axios from "axios";
 
 function Register() {
@@ -69,7 +67,6 @@ function Register() {
 
   return (
     <div className="min-h-screen py-10 px-3 bg-[url('/clipped-rings.svg')] bg-no-repeat bg-right">
-      <ToastContainer />
       <div className="flex flex-col items-center gap-7 py-5">
         <div>
           <Link
@@ -87,7 +84,7 @@ function Register() {
             <div
               className={`inp border-2 ${
                 isEmailValid ? "border-zinc-300" : "border-red-500"
-              } rounded p-2 flex w-full gap-1 items-center my-4`}
+              } rounded p-2 flex w-full gap-1 items-center my-4 shadow-md bg-opacity-50 bg-gray-200`}
             >
               <input
                 type="text"
@@ -101,7 +98,7 @@ function Register() {
             <div
               className={`inp border-2 ${
                 isEmailValid ? "border-zinc-300" : "border-red-500"
-              } rounded p-2 flex w-full gap-1 items-center my-4`}
+              } rounded p-2 flex w-full gap-1 items-center my-4 shadow-md bg-opacity-50 bg-gray-200`}
             >
               <input
                 type="text"
@@ -131,7 +128,7 @@ function Register() {
             <div
               className={`inp border-2 ${
                 isPasswordValid ? "border-zinc-300" : "border-red-500"
-              } rounded p-2 flex w-full gap-1 items-center my-4`}
+              } rounded p-2 flex w-full gap-1 items-center my-4 shadow-md bg-opacity-50 bg-gray-200`}
             >
               <input
                 type={showPassword ? "text" : "password"}
@@ -177,7 +174,7 @@ function Register() {
                 !validEmail(credentials.email) ||
                 !validPassword(credentials.password)
               }
-              className="inline-block w-full py-3 px-2 rounded text-white bg-blue-1 disabled:opacity-[0.6]"
+              className="inline-block w-full py-3 px-2 rounded text-white bg-blue-1 disabled:opacity-[0.6] shadow-md hover:shadow-xl"
             >
               Create account
             </button>
