@@ -2,7 +2,7 @@ import DefaultLayout from "@/layout/DefaultLayout";
 import React from "react";
 import Image from "next/image";
 import HomeHero from "../public/mentoringpic1.jpg";
-import Home1 from "../public/mentorpic5.jpg";
+
 import Link from "next/link";
 
 export default function Home() {
