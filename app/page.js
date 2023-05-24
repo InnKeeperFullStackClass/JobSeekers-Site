@@ -68,7 +68,7 @@ export default function Home() {
           </p>
           <div className="flex">
             <div className="w-1/2 pr-3">
-              <Image src={Home1} alt="home1" className="max-w-full" />
+              <img src="/mentorpic5.jpg" alt="home1" />
             </div>
             <div className="w-1/2 pr-3">
               <div className="flex flex-col gap-4">
@@ -84,6 +84,8 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <div></div>
       </div>
     </DefaultLayout>
   );
