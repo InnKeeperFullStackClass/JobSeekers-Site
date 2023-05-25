@@ -47,7 +47,7 @@ export default function Home() {
         </div>
 
         <div className="mt-9">
-          <p className=" text-xl text-center mb-5 text-black">
+          <p className=" text-xl text-center mb-5">
             Here's why PurposefulPath is your perfect companion on this
             transformative journey:
           </p>
