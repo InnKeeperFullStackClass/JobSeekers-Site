@@ -21,8 +21,8 @@ const Header = ({ user }) => {
               </Link>
             </li>
             <li>
-              <Link href="/jobs" className="text-black hover:text-gray-300">
-                Jobs
+              <Link href="/about" className="text-black hover:text-gray-300">
+                About
               </Link>
             </li>
           </ul>
