@@ -1,11 +1,12 @@
 import React from "react";
 import Image from "next/image";
 import AboutHero from "../public/Dami Portrait (4).jpg";
-import Layout from "@/app/layout";
+
+import DefaultLayout from "@/layout/DefaultLayout";
 
 export default function About() {
   return (
-    <Layout>
+    <DefaultLayout>
       <div>
         <div className="flex mt-9">
           <div className="w-full md:w-1/2">
@@ -83,6 +84,6 @@ export default function About() {
           </div>
         </div>
       </div>
-    </Layout>
+    </DefaultLayout>
   );
 }
