@@ -16,3 +16,15 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
+
+@media (min-width: 640px) {
+  .flex {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 639px) {
+  .flex {
+    flex-direction: column;
+  }
+}

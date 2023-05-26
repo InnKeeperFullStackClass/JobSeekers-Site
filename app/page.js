@@ -4,7 +4,7 @@ import Image from "next/image";
 import HomeHero from "../public/PurposefulPath 2.jpg";
 import Link from "next/link";
 
-export default function Home() {
+export default function Home({ user }) {
   return (
     <DefaultLayout>
       <div>
@@ -136,12 +136,33 @@ export default function Home() {
             <p className="mt-4 text-lg text-black">
               Together, we will make the best of life!
             </p>
-            <Link
-              href="/register"
-              className="mt-4 p-2 px-6 rounded bg-[#008000] text-white border border-[#008000] inline-block hover:bg-[#005800] hover:border-[#005800]"
-            >
-              Sign Up
-            </Link>
+            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 text-center mt-7 mx-auto">
+              {!user ? (
+                <>
+                  <Link
+                    href="/register"
+                    className="p-1 px-6 rounded bg-[#008000] text-white border border-blue-500 text-center"
+                  >
+                    Sign Up
+                  </Link>
+                  <Link
+                    href="/login"
+                    className="p-1 px-6 rounded bg-[#008000] text-white border border-blue-500 text-center"
+                  >
+                    Sign In
+                  </Link>
+                </>
+              ) : (
+                <div className="flex gap-2">
+                  <Link
+                    href="/Dashboard"
+                    className="p-2 px-4 rounded bg-blue-500 text-white"
+                  >
+                    Dashboard
+                  </Link>
+                </div>
+              )}
+            </div>
           </div>
 
           <div>
