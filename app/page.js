@@ -1,7 +1,7 @@
 import DefaultLayout from "@/layout/DefaultLayout";
 import React from "react";
 import Image from "next/image";
-import HomeHero from "../public/PurposefulPath 2.jpg";
+// import HomeHero from "../public/PurposefulPath 2.jpg";
 import Link from "next/link";
 
 export default function Home({ user }) {
@@ -21,8 +21,10 @@ export default function Home({ user }) {
             </div>
           </div>
           <Image
-            src={HomeHero}
+            src="/../public/PurposefulPath 2.jpg"
             alt="homehero"
+            width={1200}
+            height={200}
             className="max-w-full opacity-40"
             priority
           />
