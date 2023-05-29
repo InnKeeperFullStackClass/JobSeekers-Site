@@ -30,20 +30,30 @@ const Sidebar = () => {
               About
             </Link>
           </li>
+
           <li>
             <Link
-              href="/conversations"
+              href="/joblistings"
               className="block text-blue-500 hover:text-blue-700 font-medium"
             >
-              Forum
+              Job Listings
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href="/chatrooms"
+              className="block text-blue-500 hover:text-blue-700 font-medium"
+            >
+              Chat Room
             </Link>
           </li>
           <li>
             <Link
-              href="/"
+              href="/resources"
               className="block text-blue-500 hover:text-blue-700 font-medium"
             >
-              Home
+              Resources
             </Link>
           </li>
           {/* Add more sidebar links */}
