@@ -3,7 +3,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["https://darmiobi.com"],
+    domains: ["darmiobi.com"],
   },
   webpack5: true,
   webpack: (config) => {
