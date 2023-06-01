@@ -19,6 +19,18 @@ module.exports = {
       fontFamily: {
         body: ["Poppins", "sans-serif"],
       },
+      colors: {
+        blue1: "#F8FAFE",
+        blue: {
+          1: "#3046D9",
+        },
+        ash1: "#F8F8F8",
+        ash: "#637381",
+        ash2: "#DADCE0",
+        white: "#FFFFFF",
+        green: "#006950",
+        darkGreen: "#16B312",
+      },
     },
   },
   plugins: [],

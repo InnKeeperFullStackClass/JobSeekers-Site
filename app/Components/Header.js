@@ -12,33 +12,13 @@ const Header = () => {
   };
 
   return (
-    <header className="mt-4 mb-4 text-gray-600 body-font">
-      <div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8">
-        <div>
-          <Link
-            href="/"
-            className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
-          >
-            <Image src={Logo} alt="logo" width={80} height={80} priority />
-          </Link>
-        </div>
+    <header className="text-gray-600 body-font">
+      <div className="container mx-auto flex items-center justify-between py-4 px-6">
+        <Link href="/" className="flex title-font font-medium items-center">
+          <Image src={Logo} alt="logo" width={110} height={80} priority />
+        </Link>
 
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center gap-4">
-          <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
-            <ul className="flex flex-col space-y-4">
-              <li>
-                <Link href="/" className="text-black hover:text-gray-300">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-black hover:text-gray-300">
-                  About
-                </Link>
-              </li>
-            </ul>
-          </div>
-
+        <nav className="md:ml-auto flex items-center space-x-4">
           <div className="md:flex hidden space-x-4">
             <ul className="flex space-x-4">
               <li>
@@ -47,8 +27,11 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-black hover:text-gray-300">
-                  About
+                <Link
+                  href="/resources"
+                  className="text-black hover:text-gray-300"
+                >
+                  Resources
                 </Link>
               </li>
             </ul>
@@ -56,7 +39,8 @@ const Header = () => {
 
           <div className="md:hidden">
             <button
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
+              className="hamburger-menu md:hidden"
+              aria-label="Open Menu"
               onClick={toggleMenu}
             >
               <svg
@@ -84,6 +68,27 @@ const Header = () => {
             </button>
           </div>
         </nav>
+
+        <div className={`md:hidden ${isMenuOpen ? "block" : "hidden"}`}>
+          <ul className="flex flex-col space-y-4">
+            <li>
+              <Link
+                href="/"
+                className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/resources"
+                className="text-black-300 hover:bg-[rgb(7,39,78)] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+              >
+                Resources
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
   );
