@@ -1,9 +1,9 @@
 import DefaultLayout from "@/layout/DefaultLayout";
 import React from "react";
 import Image from "next/image";
-import HomeHero from "../public/PurposefulPath 2.jpg";
+import HomeHero from "../public/purposefulpath2.jpg";
 // import businessgrowth2 from "../public/businessgrowth2.jpg";
-import About from "../public/Dami Portrait (4).jpg";
+import About from "../public/damiportrait(4).jpg";
 import Link from "next/link";
 
 export default function Home({ user }) {
