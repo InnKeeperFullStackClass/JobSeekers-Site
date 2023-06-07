@@ -2,6 +2,7 @@ import DefaultLayout from "@/layout/DefaultLayout";
 import React from "react";
 import Image from "next/image";
 import HomeHero from "../public/PurposefulPath 2.jpg";
+// import businessgrowth2 from "../public/businessgrowth2.jpg";
 import About from "../public/Dami Portrait (4).jpg";
 import Link from "next/link";
 
@@ -9,20 +10,30 @@ export default function Home({ user }) {
   return (
     <DefaultLayout>
       <div>
-        <div className="relative">
-          <div className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-80 flex items-center justify-center">
-            <div className="text-center">
-              <p className="text-3xl text-white">
-                Welcome to the PurposefulPath Platform!
-              </p>
-            </div>
-          </div>
+        <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover">
           <Image
+            className="absolute w-full h-full object-cover mix-blend-overlay"
             src={HomeHero}
-            alt="homehero"
-            className="max-w-full opacity-40"
-            style={{ objectFit: "cover" }}
+            alt="home hero"
+            priority
           />
+          <div className="p-6 md:p-24 text-center">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold">
+              Welcome to the Purposeful Path Platform
+            </h1>
+
+            {/* <div className="flex justify-center mt-7">
+              <Link href="/ContactUs">
+                <button
+                  className="px-6 mt-10 py-2 text-center hover:text-white hover:bg-[#0b2546] bg-white rounded-md mx-auto"
+                  data-aos="fade-down"
+                  data-aos-delay="400"
+                >
+                  Get Free Consultation
+                </button>
+              </Link>
+            </div> */}
+          </div>
         </div>
 
         <div className="mt-7 text-center">
@@ -161,26 +172,19 @@ export default function Home({ user }) {
               )}
             </div>
           </div>
-
-          <section>
-            <div class="container mx-auto py-10">
-              <div class="grid gap-6 grid-cols-1 md:grid-cols-2">
-                <div>
-                  <Image
-                    src={About}
-                    alt="abouthero"
-                    class="w-full"
-                    width={500}
-                    height={500}
-                  />
-                </div>
-                <div>
-                  <p class="text-2xl md:text-4xl font-bold mb-4">
-                    About PurposefulPath's 'Growth Convener'
-                  </p>
-                  <p class="text-2xl md:text-2xl font-bold mb-4">
-                    Damilola Obidairo EMBA, CAPM, MNSChE
-                  </p>
+          <div className="flex mt-9 m-4 mt-7 flex-wrap items-center justify-center animate-fade-in-left">
+            <h2 className="text-[#0b2546]  text-3xl font-bold text-gray-800 mb-4 animate-bounce">
+              About PurposefulPath's 'Growth Convener'
+            </h2>
+            <h2 className="text-[#0b2546]  text-2xl font-bold text-gray-800 mb-4 animate-bounce">
+              Damilola Obidairo EMBA, CAPM, MNSChE
+            </h2>
+            <div className="mt-7 w-full md:w-1/2 pr-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-right">
+              <Image className="w-full" src={About} alt="about" priority />
+            </div>
+            <div className="w-full md:w-1/2 pr-5">
+              <div>
+                <div className="bg-gray-100 py-10 animate-fade-in-right">
                   <p class="text-gray-700">
                     Damilola is a seasoned business and project development
                     practitioner with a first degree in Chemical Engineering.
@@ -249,7 +253,7 @@ export default function Home({ user }) {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
 
           <div className="mt-9 mb-7">
             <p className="text-3xl font-bold mt-9 mb-7 text-center ">
