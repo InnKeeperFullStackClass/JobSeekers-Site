@@ -8,6 +8,21 @@ const ResourcesPage = () => {
     { id: 3, title: "Tutorial 1" },
   ]);
 
+  const [newResourceTitle, setNewResourceTitle] = useState("");
+
+  const handleResourceTitleChange = (e) => {
+    setNewResourceTitle(e.target.value);
+  };
+
+  const handleAddResource = () => {
+    const newResource = {
+      id: resources.length + 1,
+      title: newResourceTitle,
+    };
+    setResources([...resources, newResource]);
+    setNewResourceTitle("");
+  };
+
   return (
     <DefaultLayout>
       <div>
@@ -17,6 +32,14 @@ const ResourcesPage = () => {
             <li key={resource.id}>{resource.title}</li>
           ))}
         </ul>
+        <div>
+          <input
+            type="text"
+            value={newResourceTitle}
+            onChange={handleResourceTitleChange}
+          />
+          <button onClick={handleAddResource}>Add Resource</button>
+        </div>
       </div>
     </DefaultLayout>
   );

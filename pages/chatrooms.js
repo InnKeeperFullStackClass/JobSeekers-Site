@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
+import "../styles/chatroomspage.css"; // Replace with your WhatsApp styles
 
 const ChatRoomsPage = () => {
   const [chatRooms, setChatRooms] = useState([
@@ -52,10 +53,16 @@ const ChatRoomsPage = () => {
     e.preventDefault();
     if (inputText.trim() === "") return;
 
+    const newMessage = {
+      sender: "user", // Assume the sender is the user
+      text: inputText,
+    };
+
+    setMessages((prevMessages) => [...prevMessages, newMessage]); // Add the new message locally
+
     const message = {
       roomId: selectedRoom.id,
       text: inputText,
-      // You can also include user information like username, ID, etc.
     };
 
     socket.emit("sendMessage", message);
@@ -64,28 +71,39 @@ const ChatRoomsPage = () => {
   };
 
   return (
-    <div>
-      <h1>Chat Rooms</h1>
-      <ul>
-        {chatRooms.map((room) => (
-          <li
-            key={room.id}
-            onClick={() => handleRoomClick(room)}
-            className={selectedRoom?.id === room.id ? "selected" : ""}
-          >
-            {room.name}
-          </li>
-        ))}
-      </ul>
+    <div className="chat-page">
+      <div className="sidebar">
+        <h1>Chat Rooms</h1>
+        <ul>
+          {chatRooms.map((room) => (
+            <li
+              key={room.id}
+              onClick={() => handleRoomClick(room)}
+              className={selectedRoom?.id === room.id ? "selected" : ""}
+            >
+              {room.name}
+            </li>
+          ))}
+        </ul>
+      </div>
       {selectedRoom && (
         <div className="chat-container">
-          <h2>{selectedRoom.name}</h2>
+          <div className="chat-header">
+            <h2>{selectedRoom.name}</h2>
+          </div>
           <div className="messages">
             {messages.map((message, index) => (
-              <div key={index}>{message.text}</div>
+              <div
+                key={index}
+                className={
+                  message.sender === "user" ? "user-message" : "contact-message"
+                }
+              >
+                {message.text}
+              </div>
             ))}
           </div>
-          <form onSubmit={handleSendMessage}>
+          <form className="message-input" onSubmit={handleSendMessage}>
             <input
               type="text"
               value={inputText}
