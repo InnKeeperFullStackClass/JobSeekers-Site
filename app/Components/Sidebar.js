@@ -4,7 +4,7 @@ import Image from "next/image";
 
 const Sidebar = () => {
   // Replace the placeholder profile picture URL with the actual profile picture URL
-  const profilePictureUrl = "/../public/Dami Portrait (4).jpg";
+  const profilePictureUrl = "/../public/damiportrait(4).jpg";
 
   return (
     <aside className="bg-gray-200 w-1/4">
