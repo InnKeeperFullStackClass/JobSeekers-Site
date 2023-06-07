@@ -172,13 +172,16 @@ export default function Home({ user }) {
               )}
             </div>
           </div>
-          <div className="flex mt-9 m-4 mt-7 flex-wrap items-center justify-center animate-fade-in-left">
+          <div className="mt-7 items-center text-center justify-center animate-fade-in-left">
+            {" "}
             <h2 className="text-[#0b2546]  text-3xl font-bold text-gray-800 mb-4 animate-bounce">
               About PurposefulPath's 'Growth Convener'
             </h2>
-            <h2 className="text-[#0b2546]  text-2xl font-bold text-gray-800 mb-4 animate-bounce">
+            <h3 className="text-[#0b2546]  text-2xl font-bold text-gray-800 mb-4 animate-bounce">
               Damilola Obidairo EMBA, CAPM, MNSChE
-            </h2>
+            </h3>
+          </div>
+          <div className="flex mt-9 m-4 mt-7 flex-wrap items-center justify-center animate-fade-in-left">
             <div className="mt-7 w-full md:w-1/2 pr-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-right">
               <Image className="w-full" src={About} alt="about" priority />
             </div>

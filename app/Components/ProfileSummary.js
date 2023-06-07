@@ -1,9 +1,8 @@
 import React from "react";
 
-const ProfileSummary = ({ name, profilePicture, headline, introduction }) => {
+const ProfileSummary = ({ name, headline, introduction }) => {
   return (
     <div className="profile-summary">
-      <img src={profilePicture} alt="Profile Picture" />
       <h2>{name}</h2>
       <h3>{headline}</h3>
       <p>{introduction}</p>

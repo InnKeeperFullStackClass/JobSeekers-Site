@@ -1,27 +1,29 @@
 import React, { useState } from "react";
 
-const JobSearch = ({ onSearch }) => {
+const JobSearch = () => {
   const [keyword, setKeyword] = useState("");
+  const [location, setLocation] = useState("");
 
   const handleSearch = () => {
-    onSearch(keyword);
+    // Perform search based on keyword and location
+    // Display search results
   };
 
   return (
-    <div className="mb-4">
+    <div>
       <input
         type="text"
-        placeholder="Search jobs..."
-        className="border p-2 mr-2"
+        placeholder="Keyword"
         value={keyword}
         onChange={(e) => setKeyword(e.target.value)}
       />
-      <button
-        className="bg-blue-500 text-white px-4 py-2 rounded"
-        onClick={handleSearch}
-      >
-        Search
-      </button>
+      <input
+        type="text"
+        placeholder="Location"
+        value={location}
+        onChange={(e) => setLocation(e.target.value)}
+      />
+      <button onClick={handleSearch}>Search</button>
     </div>
   );
 };
