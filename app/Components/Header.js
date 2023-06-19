@@ -18,7 +18,7 @@ const Header = () => {
           <Image src={Logo} alt="logo" width={110} height={80} priority />
         </Link>
 
-        <nav className="md:ml-auto flex items-center space-x-4">
+        <nav className="flex filter drop-shadow-md bg-white px-4 py-4 h-20 items-center">
           <div className="md:flex hidden space-x-4">
             <ul className="flex space-x-4">
               <li>
