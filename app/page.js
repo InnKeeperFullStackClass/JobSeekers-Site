@@ -1,16 +1,31 @@
+"use client";
+import React, { useEffect } from "react";
+
 import DefaultLayout from "@/layout/DefaultLayout";
-import React from "react";
+
 import Image from "next/image";
 import HomeHero from "../public/purposefulpath2.jpg";
 // import businessgrowth2 from "../public/businessgrowth2.jpg";
 import About from "../public/damiportrait(4).jpg";
 import Link from "next/link";
+import Aos from "aos";
+import "aos/dist/aos.css";
 
 export default function Home({ user }) {
+  useEffect(() => {
+    Aos.init({
+      duration: 1800,
+      offset: 0,
+    });
+  }, []);
+
   return (
     <DefaultLayout>
       <div>
-        <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover">
+        <div
+          className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover"
+          style={{ animation: "fadeIn 1s ease-in-out" }}
+        >
           <Image
             className="absolute w-full h-full object-cover mix-blend-overlay"
             src={HomeHero}
@@ -18,7 +33,11 @@ export default function Home({ user }) {
             priority
           />
           <div className="p-6 md:p-24 text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold">
+            <h1
+              className="text-3xl md:text-4xl lg:text-5xl text-white font-bold"
+              data-aos="fade-down"
+              data-aos-delay="400"
+            >
               Welcome to the Purposeful Path Platform
             </h1>
 
@@ -54,13 +73,17 @@ export default function Home({ user }) {
           </p>
         </div>
 
-        <div className="mt-9">
+        <div className="mt-9" data-aos="fade-down" data-aos-delay="400">
           <p className=" text-xl text-center mb-5">
             Here's why PurposefulPath is your perfect companion on this
             transformative journey:
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-7">
-            <div className="bg-white rounded-lg p-6 shadow-md">
+            <div
+              className="bg-white rounded-lg p-6 shadow-md"
+              data-aos="fade-down"
+              data-aos-delay="400"
+            >
               <div className="flex items-center justify-center w-10 h-10 bg-[#006950] rounded-full text-white font-bold mb-4">
                 1
               </div>
@@ -75,7 +98,11 @@ export default function Home({ user }) {
                 insights, strategies, and support you need to excel.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-md">
+            <div
+              className="bg-white rounded-lg p-6 shadow-md"
+              data-aos="fade-down"
+              data-aos-delay="400"
+            >
               <div className="flex items-center justify-center w-10 h-10 bg-[#006950] rounded-full text-white font-bold mb-4">
                 2
               </div>
@@ -90,7 +117,11 @@ export default function Home({ user }) {
                 propel you forward.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-md">
+            <div
+              className="bg-white rounded-lg p-6 shadow-md"
+              data-aos="fade-down"
+              data-aos-delay="400"
+            >
               <div className="flex items-center justify-center w-10 h-10 bg-[#006950] rounded-full text-white font-bold mb-4">
                 3
               </div>
@@ -103,7 +134,11 @@ export default function Home({ user }) {
                 success.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-md">
+            <div
+              className="bg-white rounded-lg p-6 shadow-md"
+              data-aos="fade-down"
+              data-aos-delay="400"
+            >
               <div className="flex items-center justify-center w-10 h-10 bg-[#006950] rounded-full text-white font-bold mb-4">
                 4
               </div>
@@ -117,7 +152,11 @@ export default function Home({ user }) {
                 collectively shape a better future.
               </p>
             </div>
-            <div className="bg-white rounded-lg p-6 shadow-md">
+            <div
+              className="bg-white rounded-lg p-6 shadow-md"
+              data-aos="fade-down"
+              data-aos-delay="400"
+            >
               <div className="flex items-center justify-center w-10 h-10 bg-[#006950] rounded-full text-white font-bold mb-4">
                 5
               </div>
@@ -144,7 +183,11 @@ export default function Home({ user }) {
             <p className="mt-4 text-lg text-black">
               Together, we will make the best of life!
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center gap-3 text-center mt-7 mx-auto">
+            <div
+              className="flex flex-col sm:flex-row justify-center items-center gap-3 text-center mt-7 mx-auto"
+              data-aos="fade-down"
+              data-aos-delay="400"
+            >
               {!user ? (
                 <>
                   <Link
@@ -183,7 +226,14 @@ export default function Home({ user }) {
           </div>
           <div className="flex mt-9 m-4 mt-7 flex-wrap items-center justify-center animate-fade-in-left">
             <div className="mt-7 w-full md:w-1/2 pr-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-right">
-              <Image className="w-full" src={About} alt="about" priority />
+              <Image
+                className="w-full"
+                src={About}
+                alt="about"
+                data-aos="fade-down"
+                data-aos-delay="400"
+                priority
+              />
             </div>
             <div className="w-full md:w-1/2 pr-5">
               <div>
@@ -264,8 +314,16 @@ export default function Home({ user }) {
             </p>
             <div>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-                <div className="bg-[#0D2C34] text-white p-6 rounded-lg shadow-lg">
-                  <p className="text-lg ">
+                <div
+                  className="bg-[#0D2C34] text-white p-6 rounded-lg shadow-lg"
+                  data-aos="fade-down"
+                  data-aos-delay="400"
+                >
+                  <p
+                    className="text-lg "
+                    data-aos="fade-down"
+                    data-aos-delay="400"
+                  >
                     "Working with Damilola was quite an interesting one. I was
                     at a very critical point in my life when our paths crossed
                     and I'll always be grateful for that opportunity. There
@@ -277,8 +335,16 @@ export default function Home({ user }) {
                     career achievement "- Adebanjo Adeniji
                   </p>
                 </div>
-                <div className="bg-[#0D2C34] text-white p-6 rounded-lg shadow-lg">
-                  <p className="text-lg ">
+                <div
+                  className="bg-[#0D2C34] text-white p-6 rounded-lg shadow-lg"
+                  data-aos="fade-down"
+                  data-aos-delay="400"
+                >
+                  <p
+                    className="text-lg "
+                    data-aos="fade-down"
+                    data-aos-delay="400"
+                  >
                     "I worked with Dami as my team lead. He led with dedication
                     to his work and inspiration to his team members. Working
                     with him, you would definitely see his zeal to work, gusto,
@@ -287,8 +353,16 @@ export default function Home({ user }) {
                     field." - Tola Oladele
                   </p>
                 </div>
-                <div className="bg-[#0D2C34] text-white p-6 rounded-lg shadow-lg">
-                  <p className="text-lg">
+                <div
+                  className="bg-[#0D2C34] text-white p-6 rounded-lg shadow-lg"
+                  data-aos="fade-down"
+                  data-aos-delay="400"
+                >
+                  <p
+                    className="text-lg"
+                    data-aos="fade-down"
+                    data-aos-delay="400"
+                  >
                     "You rarely come across standout talents like Damilola,
                     although he is technically my manager, rarely does it feel
                     that way. He is focused on being a great coach and a mentor.
