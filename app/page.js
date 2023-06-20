@@ -22,36 +22,19 @@ export default function Home({ user }) {
   return (
     <DefaultLayout>
       <div>
-        <div
-          className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover"
-          style={{ animation: "fadeIn 1s ease-in-out" }}
-        >
-          <Image
-            className="absolute w-full h-full object-cover mix-blend-overlay"
-            src={HomeHero}
-            alt="home hero"
-            priority
-          />
-          <div className="p-6 md:p-24 text-center">
-            <h1
-              className="text-3xl md:text-4xl lg:text-5xl text-white font-bold"
-              data-aos="fade-down"
-              data-aos-delay="400"
-            >
-              Welcome to the Purposeful Path Platform
-            </h1>
-
-            {/* <div className="flex justify-center mt-7">
-              <Link href="/ContactUs">
-                <button
-                  className="px-6 mt-10 py-2 text-center hover:text-white hover:bg-[#0b2546] bg-white rounded-md mx-auto"
-                  data-aos="fade-down"
-                  data-aos-delay="400"
-                >
-                  Get Free Consultation
-                </button>
-              </Link>
-            </div> */}
+        <div className="" style={{ animation: "fadeIn 1s ease-in-out" }}>
+          <div className="flex flex-col justify-center md:flex-row mt-9">
+            <div className="md:w-1/2  md:mt-0">
+              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
+                Welcome to the PurposefulPath Platform
+              </h1>
+              <p className="text-lg md:text-xl mt-4">
+                Make the Best of Life with Impact-Driven Mentorship
+              </p>
+            </div>
+            <div className="md:w-1/2 flex justify-center mt-6 md:mt-0">
+              <Image className="max-w-md " src={HomeHero} alt="logo" priority />
+            </div>
           </div>
         </div>
 

@@ -1,5 +1,7 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+This site is a mentorship platform that help young jobseekers Make the Best of Life with Impact-Driven Mentorship
+
 ## Getting Started
 
 First, run the development server:
