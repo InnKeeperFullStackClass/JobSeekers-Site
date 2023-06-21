@@ -3,20 +3,23 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-gray-800 text-white py-4">
-      <div className="container mx-auto text-center">
-        <div>
-          <p className="text-white">
-            Make the Best of Life with Impact-Driven Mentorship
-          </p>
-          <p>About</p>
-          <p>Our Values</p>
-          <p>Resources</p>
-          <p>Job Listings</p>
-          <p>Legal</p>
-          <p>Contact</p>
+      <div className="container mx-auto text-center grid grid-cols-4 gap-4">
+        <div className="col-span-2">
+          <p className="mt-4 text-sm">About</p>
+          <p className="text-sm">Our Values</p>
+          <p className="text-sm">Resources</p>
+          <p className="text-sm">Job Listings</p>
+          <p className="text-sm">Legal</p>
+          <p className="text-sm">Contact</p>
         </div>
-        <p>Lagos, Nigeria</p>
-        <p>&copy; 2023 PurposefulPath. All rights reserved.</p>
+        <div className="col-span-1">
+          <p className="text-sm">Lagos, Nigeria</p>
+        </div>
+        <div className="col-span-1">
+          <p className="text-sm">
+            &copy; 2023 PurposefulPath. All rights reserved.
+          </p>
+        </div>
       </div>
     </footer>
   );

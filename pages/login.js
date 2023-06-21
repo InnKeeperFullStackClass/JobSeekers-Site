@@ -50,7 +50,7 @@ export default function RegisterForm() {
       />
       <button
         type="submit"
-        className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+        className="p-1 px-6 rounded bg-[#006950] text-white border border-blue-500 text-center"
       >
         Login
       </button>

@@ -19,6 +19,20 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
+.logo-container {
+  flex-shrink: 0;
+}
+
+.logo {
+  max-width: 100%;
+}
+
+@media (max-width: 767px) {
+  .logo-container {
+    margin-left: auto;
+  }
+}
+
 @media (min-width: 640px) {
   .flex {
     flex-direction: row;

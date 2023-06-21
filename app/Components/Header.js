@@ -14,9 +14,18 @@ const Header = () => {
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap items-center justify-between py-4 px-6 relative z-10">
-        <div className="flex items-center ">
+        <div className="flex items-center">
           <Link href="/" className="flex title-font font-medium items-center">
-            <Image className="" src={Logo} alt="logo" width={110} priority />
+            <div className="logo-container">
+              <Image
+                className="logo"
+                src={Logo}
+                alt="logo"
+                width={100}
+                height={32}
+                priority
+              />
+            </div>
           </Link>
         </div>
         <button
@@ -69,7 +78,7 @@ const Header = () => {
             Home
           </Link>
           <Link
-            href="/AboutUs"
+            href="/resources"
             className="text-black-300 hover:bg-[#006950] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >
             Resources

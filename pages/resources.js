@@ -39,32 +39,42 @@ const ResourcesPage = () => {
             <h1 className="text-3xl md:text-4xl lg:text-5xl text-white font-bold">
               Resources
             </h1>
-
-            {/* <div className="flex justify-center mt-7">
-              <Link href="/ContactUs">
-                <button
-                  className="px-6 mt-10 py-2 text-center hover:text-white hover:bg-[#0b2546] bg-white rounded-md mx-auto"
-                  data-aos="fade-down"
-                  data-aos-delay="400"
-                >
-                  Get Free Consultation
-                </button>
-              </Link>
-            </div> */}
           </div>
         </div>
-        <ul>
-          {resources.map((resource) => (
-            <li key={resource.id}>{resource.title}</li>
-          ))}
-        </ul>
-        <div>
-          <input
-            type="text"
-            value={newResourceTitle}
-            onChange={handleResourceTitleChange}
-          />
-          <button onClick={handleAddResource}>Add Resource</button>
+
+        <div className="container mx-auto mt-8">
+          <ul className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            {resources.map((resource) => (
+              <li
+                key={resource.id}
+                className="bg-white p-4 rounded-md shadow-md"
+              >
+                <h3 className="text-lg font-semibold">{resource.title}</h3>
+                <p className="mt-2 text-gray-500">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                </p>
+                {/* Add more innovative information or links related to the resource */}
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="container mx-auto mt-8  mb-5">
+          <div className="flex items-center">
+            <input
+              type="text"
+              value={newResourceTitle}
+              onChange={handleResourceTitleChange}
+              placeholder="Enter a new resource title"
+              className="p-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+            />
+            <button
+              onClick={handleAddResource}
+              className=" px-4 py-2 bg-[#006950] text-white rounded-r-md focus:outline-none hover:bg-blue-600"
+            >
+              Add Resource
+            </button>
+          </div>
         </div>
       </div>
     </DefaultLayout>

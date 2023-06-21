@@ -1,26 +1,60 @@
 import React, { useEffect, useState } from "react";
+import { motion } from "framer-motion";
 
 const JobListingsPage = () => {
   const [jobListings, setJobListings] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch job listings data from an API or any data source
-    // Update the jobListings state with the fetched data
-    // For example:
     fetch("/api/joblistings")
       .then((response) => response.json())
-      .then((data) => setJobListings(data));
+      .then((data) => {
+        setJobListings(data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        setError(error);
+        setIsLoading(false);
+      });
   }, []);
 
+  if (isLoading) {
+    return (
+      <div className="text-center">
+        <p>Loading job listings...</p>
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="text-center">
+        <p>Error loading job listings. Please try again later.</p>
+      </div>
+    );
+  }
+
   return (
-    <div>
-      <h1>Job Listings</h1>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+    >
+      <h1 className="mt-9 text-3xl text-center">Job Listings</h1>
       <ul>
         {jobListings.map((job) => (
-          <li key={job.id}>{job.title}</li>
+          <motion.li
+            key={job.id}
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            {job.title}
+          </motion.li>
         ))}
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Sidebar = () => {
   const [profilePicture, setProfilePicture] = useState(null);
@@ -18,9 +19,14 @@ const Sidebar = () => {
   };
 
   return (
-    <aside className="bg-[#4EBF85] w-1/4">
+    <motion.aside
+      className="bg-[#4EBF85] w-1/4"
+      initial={{ x: -200, opacity: 0 }}
+      animate={{ x: 0, opacity: 1 }}
+      transition={{ delay: 0.2, duration: 0.8 }}
+    >
       <div className="p-3">
-        {/* <div className="flex items-center justify-center mb-4">
+        <div className="flex items-center justify-center mb-4">
           {profilePicture ? (
             <Image
               src={profilePicture}
@@ -33,8 +39,8 @@ const Sidebar = () => {
           ) : (
             <div className="relative w-16 h-16 rounded-full bg-gray-300"></div>
           )}
-        </div> */}
-        <div className="">
+        </div>
+        <div>
           <h2 className="text-2xl font-bold mb-4">Profile</h2>
           <input
             type="file"
@@ -57,44 +63,45 @@ const Sidebar = () => {
         </div>
 
         <ul className="space-y-2">
-          <li>
+          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/about"
-              className="block  hover:text-blue-700 font-medium"
+              className="block hover:text-blue-700 font-medium"
             >
               About
             </Link>
-          </li>
+          </motion.li>
 
-          <li>
+          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/joblistings"
-              className="block  hover:text-blue-700 font-medium"
+              className="block hover:text-blue-700 font-medium"
             >
               Job Listings
             </Link>
-          </li>
+          </motion.li>
 
-          <li>
+          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/chatrooms"
-              className="block  hover:text-blue-700 font-medium"
+              className="block hover:text-blue-700 font-medium"
             >
               Chat Room
             </Link>
-          </li>
-          <li>
+          </motion.li>
+
+          <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
             <Link
               href="/resources"
               className="block hover:text-blue-700 font-medium"
             >
               Resources
             </Link>
-          </li>
+          </motion.li>
           {/* Add more sidebar links */}
         </ul>
       </div>
-    </aside>
+    </motion.aside>
   );
 };
 
