@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Aos from "aos";
 import "aos/dist/aos.css";
@@ -10,9 +10,9 @@ import ResumeUploadForm from "@/app/Components/ResumeUploadForm";
 import SavedJobs from "@/app/Components/SavedJobs";
 import JobSeekerLayout from "@/layout/JobSeekerLayout";
 // import { Bar } from "react-chartjs-2";
-// import { FacebookShareButton, TwitterShareButton } from "react-share";
-// import { FaFacebook } from "react-icons/fa";
-// import { BsTwitter } from "react-icons/bs";
+import { FacebookShareButton, TwitterShareButton } from "react-share";
+import { FaFacebook } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
 
 const UserDashboard = () => {
   // const [chartData, setChartData] = useState({
@@ -28,19 +28,19 @@ const UserDashboard = () => {
   //   ],
   // });
 
-  // const [shareCount, setShareCount] = useState(0);
+  const [shareCount, setShareCount] = useState(0);
 
-  // useEffect(() => {
-  //   // Fetch chart data from API
-  //   fetch("/api/jobApplicationsData")
-  //     .then((response) => response.json())
-  //     .then((data) => setChartData(data));
+  useEffect(() => {
+    // Fetch chart data from API
+    fetch("/api/jobApplicationsData")
+      .then((response) => response.json())
+      .then((data) => setChartData(data));
 
-  //   // Fetch share count from API
-  //   fetch("/api/shareCountData")
-  //     .then((response) => response.json())
-  //     .then((data) => setShareCount(data.count));
-  // }, []);
+    // Fetch share count from API
+    fetch("/api/shareCountData")
+      .then((response) => response.json())
+      .then((data) => setShareCount(data.count));
+  }, []);
   useEffect(() => {
     Aos.init({
       duration: 800,
@@ -65,7 +65,7 @@ const UserDashboard = () => {
     // Perform upload logic
     console.log("Resume uploaded:", resume);
   };
-  // const shareURL = "https://example.com";
+  const shareURL = "https://example.com";
 
   return (
     <JobSeekerLayout>
@@ -110,8 +110,8 @@ const UserDashboard = () => {
             <ApplicationTracker />
           </motion.div>
         </motion.div>
-        {/* <div className="flex flex-col items-center justify-center h-full px-4">
-          <Bar data={chartData} options={chartOptions} />
+        <div className="flex flex-col items-center justify-center h-full px-4">
+          {/* <Bar data={chartData} options={chartOptions} /> */}
           <div className="flex items-center justify-center">
             <FacebookShareButton url={shareURL}>
               <FaFacebook size={32} round />
@@ -121,7 +121,7 @@ const UserDashboard = () => {
             </TwitterShareButton>
             <span className="ml-2">{shareCount} shares</span>
           </div>
-        </div> */}
+        </div>
       </motion.div>
     </JobSeekerLayout>
   );
