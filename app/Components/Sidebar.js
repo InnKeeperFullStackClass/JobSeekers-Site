@@ -20,13 +20,13 @@ const Sidebar = () => {
 
   return (
     <motion.aside
-      className="bg-[#4EBF85] w-1/4"
+      className="bg-[#324B4E] w-1/4"
       initial={{ x: -200, opacity: 0 }}
       animate={{ x: 0, opacity: 1 }}
       transition={{ delay: 0.2, duration: 0.8 }}
     >
-      <div className="p-3">
-        <div className="flex items-center justify-center mb-4">
+      <div className="p-3 text-white">
+        {/* <div className="flex items-center justify-center mb-4">
           {profilePicture ? (
             <Image
               src={profilePicture}
@@ -39,7 +39,7 @@ const Sidebar = () => {
           ) : (
             <div className="relative w-16 h-16 rounded-full bg-gray-300"></div>
           )}
-        </div>
+        </div> */}
         <div>
           <h2 className="text-2xl font-bold mb-4">Profile</h2>
           <input
@@ -64,11 +64,8 @@ const Sidebar = () => {
 
         <ul className="space-y-2">
           <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link
-              href="/about"
-              className="block hover:text-blue-700 font-medium"
-            >
-              About
+            <Link href="/" className="block hover:text-blue-700 font-medium">
+              Home
             </Link>
           </motion.li>
 
