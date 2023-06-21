@@ -4,12 +4,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Add your global styles below */
-body,
-html {
-  min-height: 100vh;
-  background: #f9f9f9;
-  color: #324063;
+@layer base {
+  body,
+  html {
+    min-height: 100vh;
+    background: #f8fafe;
+    color: #324063;
+  }
 }
 
 input:-webkit-autofill,
@@ -19,21 +20,21 @@ input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 
-.logo-container {
+/* .logo-container {
   flex-shrink: 0;
 }
 
 .logo {
   max-width: 100%;
-}
+} */
 
-@media (max-width: 767px) {
+/* @media (max-width: 767px) {
   .logo-container {
     margin-left: auto;
   }
-}
+} */
 
-@media (min-width: 640px) {
+/* @media (min-width: 640px) {
   .flex {
     flex-direction: row;
   }
@@ -52,27 +53,26 @@ input:-webkit-autofill:active {
     100% {
       transform: translateX(calc(-250px * 7));
     }
-  }
-  .slider {
-    height: 100px;
-    width: auto;
-    margin: auto;
-    overflow: hidden;
-    position: relative;
-  }
-  .slideTrack {
-    animation: scroll 40s linear infinite;
-    display: flex;
-    width: calc(250px * 14);
-  }
-  .slide {
-    height: 200px;
-    width: 250px;
-  }
-  .imgPartner {
-    height: 100px;
-    width: 250px;
-  }
+  } */
+.slider {
+  height: 100px;
+  width: auto;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.slideTrack {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slide {
+  height: 200px;
+  width: 250px;
+}
+.imgPartner {
+  height: 100px;
+  width: 250px;
 }
 
 /* animate the image with a fade-in effect */
@@ -301,7 +301,7 @@ button {
   }
 }
 
-animate-fadeIn {
+.animate-fadeIn {
   animation: fadeIn 1s ease-in-out;
   animation-fill-mode: both;
 }

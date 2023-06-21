@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from "../../public/logopurpose (1).svg";
+import Logo from "../../public/pplogo.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -14,20 +14,12 @@ const Header = () => {
   return (
     <header className="text-gray-600 body-font">
       <div className="container mx-auto flex flex-wrap items-center justify-between py-4 px-6 relative z-10">
-        <div className="flex items-center">
+        <div className="flex items-center ">
           <Link href="/" className="flex title-font font-medium items-center">
-            <div className="logo-container">
-              <Image
-                className="logo"
-                src={Logo}
-                alt="logo"
-                width={100}
-                height={32}
-                priority
-              />
-            </div>
+            <Image className="" src={Logo} alt="logo" width={110} priority />
           </Link>
         </div>
+
         <button
           className="hamburger-menu ml-auto md:hidden relative z-20"
           aria-label="Open Menu"

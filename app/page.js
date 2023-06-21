@@ -4,7 +4,7 @@ import React, { useEffect } from "react";
 import DefaultLayout from "@/layout/DefaultLayout";
 
 import Image from "next/image";
-import HomeHero from "../public/purposefulpath2.jpg";
+import HomeHero from "../public/purposefulpath3.jpg";
 // import businessgrowth2 from "../public/businessgrowth2.jpg";
 import About from "../public/damiportrait(4).jpg";
 import Link from "next/link";
