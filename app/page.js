@@ -26,7 +26,7 @@ export default function Home({ user }) {
           <div className="flex flex-col justify-center md:flex-row mt-9">
             <div className="md:w-1/2  md:mt-0">
               <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
-                Welcome to the PurposefulPath Platform
+                Welcome to the Purposeful Path Platform
               </h1>
               <p className="text-lg md:text-xl mt-4">
                 Make the Best of Life with Impact-Driven Mentorship
@@ -43,7 +43,7 @@ export default function Home({ user }) {
             Are you a young job-seeker or a budding entrepreneur? Do you feel
             the burning desire to make the best of your life, but find yourself
             in need of guidance and support? Look no further!{" "}
-            <span className="text-[#008000] font-bold">Purposeful Path</span> is
+            <span className="text-[#006950] font-bold">Purposeful Path</span> is
             here to empower you with the knowledge, skills, and mentorship
             necessary to thrive in today's dynamic world.
           </p>
@@ -207,8 +207,8 @@ export default function Home({ user }) {
               Damilola Obidairo EMBA, CAPM, MNSChE
             </h3>
           </div>
-          <div className="flex mt-9 m-4 mt-7 flex-wrap items-center justify-center animate-fade-in-left">
-            <div className="mt-7 w-full md:w-1/2 pr-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-right">
+          <div className="mt-9 m-4 mt-7 items-center justify-center animate-fade-in-left">
+            <div className="mt-7 w-full  pr-5 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 animate-fade-in-right">
               <Image
                 className="w-full"
                 src={About}
@@ -218,10 +218,10 @@ export default function Home({ user }) {
                 priority
               />
             </div>
-            <div className="w-full md:w-1/2 pr-5">
+            <div className="w-full  pr-5">
               <div>
                 <div className="bg-gray-100 py-10 animate-fade-in-right">
-                  <p class="text-gray-700">
+                  <p class="text-gray-700 mt-3 mb-3">
                     Damilola is a seasoned business and project development
                     practitioner with a first degree in Chemical Engineering.
                     His multisectoral experience spanning almost two decades
@@ -232,14 +232,14 @@ export default function Home({ user }) {
                     His guiding principles are Integrity, Creativity, Excellence
                     and Continuous learning.
                   </p>
-                  <p>
+                  <p class="text-gray-700 mt-3 mb-3">
                     He is currently the CEO at 8thGear Partners Ltd – a Venture
                     Studio that also provides enterprise services to Start-ups
                     and SMEs that require digital transformation. At 8thGear he
                     also provides project delivery services to partner
                     development agencies, globally.
                   </p>
-                  <p>
+                  <p class="text-gray-700 mt-3 mb-3">
                     In his career, He has had the privilege of leading teams
                     that have worked with organizations and donor funders such
                     as the Bill and Melinda Gates Foundation, University of
@@ -252,7 +252,7 @@ export default function Home({ user }) {
                     rigorous impact assessments with several local and
                     international stakeholders involved.
                   </p>
-                  <p>
+                  <p class="text-gray-700 mt-3 mb-3">
                     His work with Wennovation Hub/LoftyInc Capital Management
                     exposed him to opportunities to support start-ups through
                     various incubation programs and some handholding towards
@@ -263,7 +263,7 @@ export default function Home({ user }) {
                     high-level relationships, especially with Government and
                     International NGOs.
                   </p>
-                  <p>
+                  <p class="text-gray-700 mt-3 mb-3">
                     His first degree in Chemical Engineering was earned in 2008
                     from Lagos State University. He also earned his Executive
                     MBA with Quantic School of Business and Technology,
@@ -271,7 +271,7 @@ export default function Home({ user }) {
                     Certificate Associate in Project Management from the Project
                     Management Institute in 2011.
                   </p>
-                  <p>
+                  <p class="text-gray-700 mt-3 mb-3">
                     He has won several meritorious awards on different
                     platforms, some of which are a service excellence award from
                     the Lagos Chapter of the Nigerian Society of Chemical
@@ -280,7 +280,7 @@ export default function Home({ user }) {
                     winner of the Lagos Merck Accelerator 2019 cohort for Pronov
                     (a Pharma tech Start-up) as COO.
                   </p>
-                  <p>
+                  <p class="text-gray-700 mt-3 mb-3">
                     He loves to see epic movies, read widely and swim at
                     leisure. He identifies as a guitarist, singer/songwriter,
                     and gardener. He is happily married with two intelligent
