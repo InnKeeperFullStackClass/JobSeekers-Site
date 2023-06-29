@@ -47,6 +47,15 @@ const JobSeekerLayout = ({ children }) => {
             </li>
             <li>
               <Link
+                href="/posts"
+                className="flex gap-3 items-center py-3 hover:text-blue-1"
+              >
+                <AiOutlineWechat width={22} />
+                <span>Forum</span>
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/resources"
                 className="flex gap-3 items-center py-3 hover:text-blue-1"
               >
