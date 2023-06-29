@@ -1,6 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
+import Image from "next/image";
+
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineWechat } from "react-icons/ai";
 import { GrResources } from "react-icons/gr";
@@ -10,8 +12,20 @@ import { BiLogOut } from "react-icons/bi";
 const JobSeekerLayout = ({ children }) => {
   return (
     <div className="md:flex h-screen">
-      <nav className="grow md:w-48 shadow-md md:relative bg-[#324B4E]  text-white z-[100] flex justify-between">
+      <nav className="grow md:w-48 shadow-md md:relative bg-[#E6F4F1]  text-black z-[100] flex justify-between">
         <div className="w-full flex flex-col">
+          <div className="flex items-center mb-7 mt-3">
+            <Link href="/" className="flex title-font font-medium items-center">
+              <Image
+                className=""
+                src="./pplogo.svg"
+                alt="logo"
+                width={110}
+                height={110}
+                priority
+              />
+            </Link>
+          </div>
           <ul className="pl-5 pt-5 pb-2 text-zinc-500 md:block grow">
             <li>
               <Link
@@ -54,7 +68,11 @@ const JobSeekerLayout = ({ children }) => {
       </nav>
       <div className="main w-full flex flex-col">
         <header className="p-4 flex justify-between items-center shadow-md">
-          <div className="profile flex items-center gap-2"></div>
+          <div className="profile flex items-center gap-2">
+            <h2 className="text-3xl text-center  font-bold mb-5 mt-5">
+              Welcome to Your Dashboard
+            </h2>
+          </div>
           <div className="logout">
             <button className="text-zinc-600 flex items-center gap-3 hover:text-blue-1">
               <BiLogOut width={15} />
