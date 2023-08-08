@@ -36,7 +36,7 @@ const JobSeekerLayout = ({ children }) => {
                 <span>Home</span>
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link
                 href="/chatrooms"
                 className="flex gap-3 items-center py-3 hover:text-blue-1"
@@ -44,7 +44,7 @@ const JobSeekerLayout = ({ children }) => {
                 <AiOutlineWechat width={22} />
                 <span>Conversations</span>
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link
                 href="/posts"

@@ -14,4 +14,7 @@ module.exports = withStyles({
     );
     return config;
   },
+  api: {
+    bodyParser: false,
+  },
 });

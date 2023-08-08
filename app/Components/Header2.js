@@ -70,6 +70,12 @@ const Header2 = () => {
             Home
           </Link>
           <Link
+            href="/chatrooms"
+            className="text-black-300 hover:bg-[#006950] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+          >
+            Chatrooms
+          </Link>
+          <Link
             href="/dashboard"
             className="text-black-300 hover:bg-[#006950] hover:text-white px-3 py-2 rounded-md text-sm font-medium"
           >

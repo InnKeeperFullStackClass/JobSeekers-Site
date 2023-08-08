@@ -48,6 +48,7 @@ const UserDashboard = () => {
             data-aos="fade-down"
             data-aos-delay="200"
           >
+            Profile
             <ProfileSummary />
           </motion.div>
 
@@ -56,6 +57,7 @@ const UserDashboard = () => {
             data-aos="fade-down"
             data-aos-delay="400"
           >
+            Job Search
             <JobSearch />
           </motion.div>
 
@@ -64,6 +66,7 @@ const UserDashboard = () => {
             data-aos="fade-down"
             data-aos-delay="600"
           >
+            Saved Jobs
             <SavedJobs />
           </motion.div>
 
@@ -72,6 +75,8 @@ const UserDashboard = () => {
             data-aos="fade-down"
             data-aos-delay="800"
           >
+            {" "}
+            Resume Upload
             <ResumeUploadForm onUpload={handleUpload} />
           </motion.div>
 
@@ -80,6 +85,8 @@ const UserDashboard = () => {
             data-aos="fade-down"
             data-aos-delay="800"
           >
+            {" "}
+            Job Apllication
             <JobApplicationForm />
           </motion.div>
 
@@ -88,6 +95,8 @@ const UserDashboard = () => {
             data-aos="fade-down"
             data-aos-delay="1000"
           >
+            {" "}
+            Applications Tracker
             <ApplicationTracker />
           </motion.div>
         </div>
