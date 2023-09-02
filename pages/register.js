@@ -35,17 +35,14 @@ export default function RegisterForm() {
       });
 
       if (response.ok) {
-        // Registration successful, handle the success case
         console.log("Registration successful");
-        // Redirect to the dashboard page
+
         router.push("/dashboard");
       } else {
-        // Registration failed, handle the error case
         const data = await response.json();
         console.error("Registration failed:", data.message);
       }
     } catch (error) {
-      // Handle any network or server errors
       console.error("An error occurred:", error);
     }
   };
