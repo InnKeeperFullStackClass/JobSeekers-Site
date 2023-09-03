@@ -2,6 +2,7 @@ import React from "react";
 import Link from "next/link";
 
 import Image from "next/image";
+import Profile from "../public/damiportrait(4).jpg";
 
 import { AiOutlineHome } from "react-icons/ai";
 import { AiOutlineWechat } from "react-icons/ai";
@@ -9,7 +10,7 @@ import { GrResources } from "react-icons/gr";
 import { MdOutlineSupportAgent } from "react-icons/md";
 import { BiLogOut } from "react-icons/bi";
 
-const JobSeekerLayout = ({ children }) => {
+const JobSeekerLayout = ({ children, user }) => {
   return (
     <div className="md:flex h-screen">
       <nav className="grow md:w-48 shadow-md md:relative bg-[#E6F4F1]  text-black z-[100] flex justify-between">
@@ -36,15 +37,7 @@ const JobSeekerLayout = ({ children }) => {
                 <span>Home</span>
               </Link>
             </li>
-            {/* <li>
-              <Link
-                href="/chatrooms"
-                className="flex gap-3 items-center py-3 hover:text-blue-1"
-              >
-                <AiOutlineWechat width={22} />
-                <span>Conversations</span>
-              </Link>
-            </li> */}
+
             <li>
               <Link
                 href="/posts"
@@ -79,10 +72,18 @@ const JobSeekerLayout = ({ children }) => {
         <header className="p-4 flex justify-between items-center shadow-md">
           <div className="profile flex items-center gap-2">
             <h2 className="text-3xl text-center  font-bold mb-5 mt-5">
-              Welcome to Your Dashboard
+              Welcome {user},
             </h2>
           </div>
-          <div className="logout">
+
+          <div className="logout flex gap-2">
+            <div className="profile ">
+              <Image
+                src={Profile}
+                alt="Profile"
+                className="w-10 h-10 rounded-full"
+              />
+            </div>
             <button className="text-zinc-600 flex items-center gap-3 hover:text-blue-1">
               <BiLogOut width={15} />
               <span>Logout</span>

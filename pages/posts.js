@@ -35,12 +35,11 @@ const ForumPage = () => {
 
   const handlePostSubmit = async (e) => {
     e.preventDefault();
-    const { title, content, file } = e.target.elements;
+    const { title, content } = e.target.elements;
 
     const formData = new FormData();
     formData.append("title", title.value);
     formData.append("content", content.value);
-    formData.append("file", file.files[0]);
 
     try {
       const response = await fetch("/api/posts", {
@@ -51,7 +50,6 @@ const ForumPage = () => {
       if (response.ok) {
         title.value = "";
         content.value = "";
-        file.value = null;
         fetchPosts();
       } else {
         console.error(data.message);
@@ -143,14 +141,6 @@ const ForumPage = () => {
                   className="border rounded-md py-2 px-3 h-32 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   required
                 ></textarea>
-              </div>
-              <div className="flex flex-col mb-4">
-                <input
-                  type="file"
-                  name="file"
-                  className="border rounded-md py-2 px-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
               </div>
               <button
                 type="submit"
