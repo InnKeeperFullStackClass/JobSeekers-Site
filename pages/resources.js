@@ -27,7 +27,7 @@ const ResourcesPage = () => {
 
   return (
     <DefaultLayout>
-      <div>
+      <div className="mx-auto mt-9   py-10 md:py-10">
         <div className="relative bg-gradient-to-tr from-gray-500 to-gray-700 w-full bg-cover">
           <Image
             className="absolute w-full h-full object-cover mix-blend-overlay"
