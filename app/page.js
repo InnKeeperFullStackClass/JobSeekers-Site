@@ -28,8 +28,8 @@ export default function Home({ user }) {
           style={{ animation: "fadeIn 1s ease-in-out" }}
         >
           <div className=" py-10 md:py-10 text-white bg-gradient-to-b from-[#006950] to-gray-500 flex flex-col justify-center md:flex-row mt-9">
-            <div className="md:w-1/2  md:mt-0">
-              <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold">
+            <div className=" m-4 md:w-1/2  md:mt-0">
+              <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold">
                 Welcome to the Purposeful Path Platform
               </h1>
               <p className="text-lg md:text-xl mt-4">
@@ -42,7 +42,7 @@ export default function Home({ user }) {
           </div>
         </div>
 
-        <section className=" container mx-auto mb-12 text-center">
+        <section className="m-4 container mx-auto mb-12 text-center">
           <p className="text-lg text-gray-700">
             Are you a young job-seeker or a budding entrepreneur? Do you feel
             the burning desire to make the best of your life, but find yourself
@@ -65,7 +65,7 @@ export default function Home({ user }) {
             <h4 className="mb-7 text-3xl text-center text-[#006950] font-bold mb-5">
               Why PurposefulPath ?
             </h4>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+            <div className=" m-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
               <div
                 className="bg-[#D2E4D6] rounded-lg p-6 shadow-md"
                 data-aos="fade-down"
@@ -203,7 +203,7 @@ export default function Home({ user }) {
         </section>
 
         <section
-          className="relative bg-cover bg-center"
+          className=" container mx-auto relative bg-cover bg-center"
           style={{
             backgroundImage: "url('/mentoringpic1.jpg')",
           }}
@@ -250,7 +250,7 @@ export default function Home({ user }) {
             </div>
           </div>
         </section>
-        <section className="bg-[#006950] text-white p-6 rounded-lg shadow-lg text-center mb-12">
+        <section className="m-4  text-xl bg-[#006950] text-white p-6 rounded-lg shadow-lg text-center mb-12">
           <p className="text-lg">
             Unleash your potential. Embrace your dreams. Sign up now and embark
             on a transformative mentorship journey with PurposefulPath.
