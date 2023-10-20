@@ -1,4 +1,4 @@
-import Header from "@/app/Components/Header";
+import Header from "@/app/Components/Navbar";
 import Footer from "@/app/Components/Footer";
 import React from "react";
 
